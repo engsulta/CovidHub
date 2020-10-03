@@ -64,7 +64,7 @@ extension CovidNetworkClient {
 /// Covid End-point simple representation for custom url request builder
 enum CovidApiEndPoint: Equatable {
     case countries
-    case statistics(day: String)
+    case statistics
     case history(country: String, day: String)
 
 
