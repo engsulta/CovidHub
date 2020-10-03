@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		350742982528CF47003B0F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742972528CF47003B0F90 /* AppDelegate.swift */; };
-		3507429A2528CF47003B0F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742992528CF47003B0F90 /* SceneDelegate.swift */; };
-		3507429C2528CF47003B0F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3507429B2528CF47003B0F90 /* ViewController.swift */; };
-		3507429F2528CF48003B0F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3507429D2528CF48003B0F90 /* Main.storyboard */; };
 		350742A12528CF49003B0F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350742A02528CF49003B0F90 /* Assets.xcassets */; };
 		350742A42528CF49003B0F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350742A22528CF49003B0F90 /* LaunchScreen.storyboard */; };
 		350742AF2528CF49003B0F90 /* CovidHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742AE2528CF49003B0F90 /* CovidHubTests.swift */; };
 		350742BA2528CF49003B0F90 /* CovidHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742B92528CF49003B0F90 /* CovidHubUITests.swift */; };
+		350742E22528D0F8003B0F90 /* Countries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350742E12528D0F8003B0F90 /* Countries.storyboard */; };
+		350742E72528D157003B0F90 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742E62528D157003B0F90 /* CountryListViewController.swift */; };
+		350742EF2528D16C003B0F90 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742EE2528D16C003B0F90 /* CountryListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,6 @@
 /* Begin PBXFileReference section */
 		350742942528CF47003B0F90 /* CovidHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350742972528CF47003B0F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		350742992528CF47003B0F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3507429B2528CF47003B0F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3507429E2528CF48003B0F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		350742A02528CF49003B0F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350742A32528CF49003B0F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		350742A52528CF49003B0F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,9 @@
 		350742B52528CF49003B0F90 /* CovidHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		350742B92528CF49003B0F90 /* CovidHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidHubUITests.swift; sourceTree = "<group>"; };
 		350742BB2528CF49003B0F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350742E12528D0F8003B0F90 /* Countries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Countries.storyboard; sourceTree = "<group>"; };
+		350742E62528D157003B0F90 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		350742EE2528D16C003B0F90 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,12 @@
 		350742962528CF47003B0F90 /* CovidHub */ = {
 			isa = PBXGroup;
 			children = (
+				350742DE2528D0AF003B0F90 /* Countries List Screen */,
+				350742E02528D0D9003B0F90 /* HistoryScreen */,
+				350742DF2528D0C3003B0F90 /* Details Screen */,
+				350742D12528D001003B0F90 /* Resources */,
+				350742D02528CFE7003B0F90 /* Support Files */,
 				350742972528CF47003B0F90 /* AppDelegate.swift */,
-				350742992528CF47003B0F90 /* SceneDelegate.swift */,
-				3507429B2528CF47003B0F90 /* ViewController.swift */,
-				3507429D2528CF48003B0F90 /* Main.storyboard */,
-				350742A02528CF49003B0F90 /* Assets.xcassets */,
-				350742A22528CF49003B0F90 /* LaunchScreen.storyboard */,
-				350742A52528CF49003B0F90 /* Info.plist */,
 			);
 			path = CovidHub;
 			sourceTree = "<group>";
@@ -126,6 +125,55 @@
 				350742BB2528CF49003B0F90 /* Info.plist */,
 			);
 			path = CovidHubUITests;
+			sourceTree = "<group>";
+		};
+		350742D02528CFE7003B0F90 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				350742A52528CF49003B0F90 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		350742D12528D001003B0F90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				350742A22528CF49003B0F90 /* LaunchScreen.storyboard */,
+				350742A02528CF49003B0F90 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		350742DE2528D0AF003B0F90 /* Countries List Screen */ = {
+			isa = PBXGroup;
+			children = (
+				350742E12528D0F8003B0F90 /* Countries.storyboard */,
+				350742E62528D157003B0F90 /* CountryListViewController.swift */,
+				350742EE2528D16C003B0F90 /* CountryListViewModel.swift */,
+				350742F32528D173003B0F90 /* cell */,
+			);
+			path = "Countries List Screen";
+			sourceTree = "<group>";
+		};
+		350742DF2528D0C3003B0F90 /* Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Details Screen";
+			sourceTree = "<group>";
+		};
+		350742E02528D0D9003B0F90 /* HistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryScreen;
+			sourceTree = "<group>";
+		};
+		350742F32528D173003B0F90 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +279,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350742E22528D0F8003B0F90 /* Countries.storyboard in Resources */,
 				350742A42528CF49003B0F90 /* LaunchScreen.storyboard in Resources */,
 				350742A12528CF49003B0F90 /* Assets.xcassets in Resources */,
-				3507429F2528CF48003B0F90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3507429C2528CF47003B0F90 /* ViewController.swift in Sources */,
 				350742982528CF47003B0F90 /* AppDelegate.swift in Sources */,
-				3507429A2528CF47003B0F90 /* SceneDelegate.swift in Sources */,
+				350742EF2528D16C003B0F90 /* CountryListViewModel.swift in Sources */,
+				350742E72528D157003B0F90 /* CountryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +344,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3507429D2528CF48003B0F90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3507429E2528CF48003B0F90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		350742A22528CF49003B0F90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,7 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 563L3XHGNY;
-				INFOPLIST_FILE = CovidHub/Info.plist;
+				INFOPLIST_FILE = "CovidHub/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 563L3XHGNY;
-				INFOPLIST_FILE = CovidHub/Info.plist;
+				INFOPLIST_FILE = "CovidHub/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
