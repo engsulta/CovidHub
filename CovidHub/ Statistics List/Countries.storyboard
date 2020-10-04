@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Country List View Controller-->
+        <!--Statistics List View Controller-->
         <scene sceneID="HoF-r6-r2R">
             <objects>
-                <tableViewController id="7oR-gv-BpT" customClass="CountryListViewController" customModule="CovidHub" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7oR-gv-BpT" customClass="StatisticsListViewController" customModule="CovidHub" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7NN-xf-9gY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

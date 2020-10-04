@@ -10,7 +10,7 @@
 		350742982528CF47003B0F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742972528CF47003B0F90 /* AppDelegate.swift */; };
 		350742A12528CF49003B0F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350742A02528CF49003B0F90 /* Assets.xcassets */; };
 		350742A42528CF49003B0F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350742A22528CF49003B0F90 /* LaunchScreen.storyboard */; };
-		350742AF2528CF49003B0F90 /* CovidHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742AE2528CF49003B0F90 /* CovidHubTests.swift */; };
+		350742AF2528CF49003B0F90 /* CovidHubNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742AE2528CF49003B0F90 /* CovidHubNetworkTests.swift */; };
 		350742BA2528CF49003B0F90 /* CovidHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742B92528CF49003B0F90 /* CovidHubUITests.swift */; };
 		350742E22528D0F8003B0F90 /* Countries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350742E12528D0F8003B0F90 /* Countries.storyboard */; };
 		350742E72528D157003B0F90 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350742E62528D157003B0F90 /* CountryListViewController.swift */; };
@@ -44,7 +44,7 @@
 		350742A32528CF49003B0F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		350742A52528CF49003B0F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350742AA2528CF49003B0F90 /* CovidHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		350742AE2528CF49003B0F90 /* CovidHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidHubTests.swift; sourceTree = "<group>"; };
+		350742AE2528CF49003B0F90 /* CovidHubNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidHubNetworkTests.swift; sourceTree = "<group>"; };
 		350742B02528CF49003B0F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350742B52528CF49003B0F90 /* CovidHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		350742B92528CF49003B0F90 /* CovidHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidHubUITests.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		350742AD2528CF49003B0F90 /* CovidHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				350742AE2528CF49003B0F90 /* CovidHubTests.swift */,
+				350742AE2528CF49003B0F90 /* CovidHubNetworkTests.swift */,
 				350742B02528CF49003B0F90 /* Info.plist */,
 			);
 			path = CovidHubTests;
@@ -344,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				350742AF2528CF49003B0F90 /* CovidHubTests.swift in Sources */,
+				350742AF2528CF49003B0F90 /* CovidHubNetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
