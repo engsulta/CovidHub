@@ -63,17 +63,13 @@ extension CovidNetworkClient {
 
 /// Covid End-point simple representation for custom url request builder
 enum CovidApiEndPoint: Equatable {
-    case countries
-    case statistics
-    case history(country: String, day: String)
+    case allCountries
+    case history(country: String, day: String?)
 
 
     var path: String {
         switch self {
-
-        case .countries:
-            return "/countries"
-        case .statistics:
+        case .allCountries:
             return "/statistics"
         case .history:
             return "/history"
@@ -83,6 +79,7 @@ enum CovidApiEndPoint: Equatable {
     var parameters: [String: String]? {
         switch self {
         case let .history(country, day):
+            guard let day = day else { return ["country": country]}
             return ["day": day, "country": country]
         default:
             return nil
@@ -104,9 +101,6 @@ enum CovidApiEndPoint: Equatable {
                                                     resolvingAgainstBaseURL: false) else { return nil }
             urlComponents.setQueryItems(with: parameters ?? [:])
             request.url = urlComponents.url
-            if request.value(forHTTPHeaderField: "Content-Type") == nil {
-                request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            }
         default:
             break
         }

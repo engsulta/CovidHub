@@ -9,7 +9,7 @@ import Foundation
 
 struct CovidStatisticsResponse : Codable {
 
-    let statistics : [CovidStatisticsResponseModel] = []
+    let statistics : [CovidStatisticsResponseModel]?
     enum CodingKeys: String, CodingKey {
         case statistics = "response"
     }
@@ -22,6 +22,7 @@ struct CovidStatisticsResponseModel : Codable {
     let day : String?
     let deaths : Death?
     let tests : Test?
+    let continent: String?
 
 
     enum CodingKeys: String, CodingKey {
@@ -30,6 +31,28 @@ struct CovidStatisticsResponseModel : Codable {
         case day = "day"
         case deaths
         case tests
+        case continent
+    }
+
+    func mapToViewModel() -> CovidStatisticsCellViewModel {
+
+        let viewModel = CovidStatisticsCellViewModel(title: country,
+                                                     dailyTests: "\(tests?.total ?? 0)",
+                                                     newCases: cases?.new,
+                                                     newDeath: deaths?.new,
+                                                     totalCases: "\(cases?.total ?? 0)",
+                                                     totalDeath: "\(deaths?.total ?? 0)")
+        return viewModel
+    }
+
+    func mapToHishtoryViewModel() -> CovidStatisticsCellViewModel {
+        let viewModel = CovidStatisticsCellViewModel(title: day,
+                                                     dailyTests: "\(tests?.total ?? 0)",
+                                                     newCases: cases?.new,
+                                                     newDeath: deaths?.new,
+                                                     totalCases: "\(cases?.total ?? 0)",
+                                                     totalDeath: "\(deaths?.total ?? 0)")
+        return viewModel
     }
 }
 
@@ -45,7 +68,7 @@ struct Death : Codable {
 }
 
 struct Test : Codable {
-    let total : String?
+    let total : Int?
     enum CodingKeys: String, CodingKey {
         case total = "total"
     }

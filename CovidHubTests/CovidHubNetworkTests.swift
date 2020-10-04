@@ -26,7 +26,7 @@ class CovidHubNetworkTests: XCTestCase {
 
     func testRequestSucceed() {
         let exp = expectation(description: #function)
-        mockNetworkManager.fetch(endPoint: .statistics,
+        mockNetworkManager.fetch(endPoint: .allCountries,
                                  model: TestModel.self){ [weak self] (response, error)  in
 
             guard let self = self else { XCTFail("unknow"); return }
@@ -44,7 +44,7 @@ class CovidHubNetworkTests: XCTestCase {
 
     func testRequestFailed() {
         let exp = expectation(description: #function)
-        mockNetworkManager.fetch(endPoint: .statistics,
+        mockNetworkManager.fetch(endPoint: .allCountries,
                                  model: String.self) {(response, error)  in
             if error != nil {
                 XCTAssertEqual(error, NetworkError.faildToDecode)
@@ -58,7 +58,7 @@ class CovidHubNetworkTests: XCTestCase {
 
     func testCancellingTask() {
         let exp = expectation(description: #function)
-        mockNetworkManager.fetch(endPoint: .statistics, model: String.self) {(response, error)  in
+        mockNetworkManager.fetch(endPoint: .allCountries, model: String.self) {(response, error)  in
             if error != nil {
                 XCTAssertEqual(self.mockSession.urlSessionDataTaskMock.isCancelledCalled, true)
             } else {
@@ -70,7 +70,7 @@ class CovidHubNetworkTests: XCTestCase {
     }
 
     func testStatisticsEndPointBuilder() {
-        let statisticsEndPoint = CovidApiEndPoint.statistics
+        let statisticsEndPoint = CovidApiEndPoint.allCountries
         XCTAssertEqual(statisticsEndPoint.url?.url?.absoluteString,
                        "\(Constants.baseURL)/statistics")
 
