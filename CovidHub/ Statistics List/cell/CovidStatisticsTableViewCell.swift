@@ -8,22 +8,20 @@
 import UIKit
 
 class CovidStatisticsTableViewCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var numberOfCases: UILabel!
+    @IBOutlet weak var numberOfDeaths: UILabel!
+    @IBOutlet weak var numberOfTests: UILabel!
+
 
     var isShimmeringRunning: Bool = false
-    var statisticsVM: CovidStatisticsCellViewModel? {
+    var viewModel: CovidStatisticsCellViewModel? {
         didSet {
+            title.text = viewModel?.title
+            numberOfCases.text = viewModel?.newCases
+            numberOfDeaths.text = viewModel?.newDeath
+            numberOfTests.text = viewModel?.dailyTests
             self.layoutIfNeeded()
         }
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }

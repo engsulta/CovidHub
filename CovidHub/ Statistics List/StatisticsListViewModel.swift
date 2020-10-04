@@ -11,10 +11,26 @@ class StatisticsListViewModel {
     /// we can inject testable provider here
     var provider: CovidNetworkClientProtocol = CovidNetworkClient()
     var statisticsType: CovidApiEndPoint = .allCountries
+    var reloadTableClosure: (()-> Void)?
     var currentTask: Cancellable?
+    var searchText: String = "" {
+        didSet{
+            guard !searchText.isEmpty else { filteredStatisticsVM = statisticsCellsViewModels; return }
+            filteredStatisticsVM = statisticsCellsViewModels.filter {
+                ($0.title?.contains(searchText) ?? false)
+            }}
+    }
     var shouldShowShimmer: Bool = false
-    var statisticsCellsViewModels: [CovidStatisticsCellViewModel] = []
-
+    var statisticsCellsViewModels: [CovidStatisticsCellViewModel] = [] {
+        didSet {
+            filteredStatisticsVM = statisticsCellsViewModels
+        }
+    }
+    var filteredStatisticsVM: [CovidStatisticsCellViewModel] = [] {
+        didSet {
+            reloadTableClosure?()
+        }
+    }
 
     init() {
        //loadShimmeringModel()
@@ -37,12 +53,12 @@ class StatisticsListViewModel {
 
             switch self.statisticsType  {
             case .allCountries:
-                self.statisticsCellsViewModels = statistics.sorted{ $0.country ?? "" < $1.country ?? "" }
+
+                self.statisticsCellsViewModels = statistics.filter{$0.continent != $0.country}.sorted{ $0.country ?? "" < $1.country ?? "" }
                     .compactMap { $0.mapToViewModel() }
 
             case .history:
-                self.statisticsCellsViewModels = statistics.sorted{ $0.country ?? "" < $1.country ?? "" }
-                    .compactMap { $0.mapToHishtoryViewModel() }
+                self.statisticsCellsViewModels = statistics.compactMap { $0.mapToHishtoryViewModel() }
             }
 
             self.shouldShowShimmer = false
@@ -52,11 +68,12 @@ class StatisticsListViewModel {
 
 
     func statistics(at index: Int) -> CovidStatisticsCellViewModel {
-        return statisticsCellsViewModels[index]
+        return filteredStatisticsVM[index]
     }
 
 
 }
+
 
 //MARK:- shimmiring model loading
 extension StatisticsListViewModel {

@@ -5,3 +5,14 @@
   Created by Ahmed Sultan on 10/4/20.
   
 */
+"numberOfCases" = "Number of cases";
+"numberOfDeaths" = "Number of deaths";
+"numberOfTests" = "Number of tests";
+"totalOfCases" = "Total of cases";
+"totalOfDeaths" = "Total of deaths";
+"totalOfTests" = "Total of tests";
+"showHistory" = "Show History";
+"AllCountries" = "All Countries";
+"total" = "Total";
+"historyTitle" = "History for %@";
+

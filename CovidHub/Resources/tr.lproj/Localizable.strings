@@ -5,3 +5,13 @@
   Created by Ahmed Sultan on 10/4/20.
   
 */
+"numberOfCases" = "Vaka sayısı";
+"numberOfDeaths" = "Ölümlerin sayısı";
+"numberOfTests" = "Test sayısı";
+"totalOfCases" = "Vakaların toplamı";
+"totalOfDeaths" = "Toplam ölüm";
+"totalOfTests" = "Toplam test";
+"showHistory" = "Geçmişi Göster";
+"AllCountries" = "Tüm Ülkeler";
+"total" = "Toplam";
+"historyTitle" = "için geçmiş %@";
