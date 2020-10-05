@@ -14,7 +14,6 @@ class CovidStatisticsTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfTests: UILabel!
 
 
-    var isShimmeringRunning: Bool = false
     var viewModel: CovidStatisticsCellViewModel? {
         didSet {
             title.text = viewModel?.title

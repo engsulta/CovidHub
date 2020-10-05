@@ -25,6 +25,8 @@
 		35B6C400252A7CA2000872DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35B6C402252A7CA2000872DD /* Localizable.strings */; };
 		35B6C408252A7CEA000872DD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6C407252A7CEA000872DD /* String+Localized.swift */; };
 		35B6C410252A81E2000872DD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6C40F252A81E2000872DD /* UIButton+Extension.swift */; };
+		35B6C418252A89A4000872DD /* StatisticsListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6C417252A89A4000872DD /* StatisticsListViewTests.swift */; };
+		35B6C42F252A8F18000872DD /* DetailsVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6C42E252A8F18000872DD /* DetailsVCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		35B6C406252A7CAF000872DD /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		35B6C407252A7CEA000872DD /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		35B6C40F252A81E2000872DD /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		35B6C417252A89A4000872DD /* StatisticsListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsListViewTests.swift; sourceTree = "<group>"; };
+		35B6C42E252A8F18000872DD /* DetailsVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,6 @@
 			children = (
 				350742DE2528D0AF003B0F90 /*  Statistics List */,
 				350742DF2528D0C3003B0F90 /* Details Screen */,
-				350742E02528D0D9003B0F90 /* HistoryScreen */,
 				350742FA2528D43A003B0F90 /* Networking */,
 				350742D12528D001003B0F90 /* Resources */,
 				350742D02528CFE7003B0F90 /* Support Files */,
@@ -135,6 +138,8 @@
 		350742AD2528CF49003B0F90 /* CovidHubTests */ = {
 			isa = PBXGroup;
 			children = (
+				35B6C417252A89A4000872DD /* StatisticsListViewTests.swift */,
+				35B6C42E252A8F18000872DD /* DetailsVCTests.swift */,
 				350742AE2528CF49003B0F90 /* CovidHubNetworkTests.swift */,
 				350742B02528CF49003B0F90 /* Info.plist */,
 			);
@@ -187,13 +192,6 @@
 				3507433925293C0E003B0F90 /* DetailsViewController.swift */,
 			);
 			path = "Details Screen";
-			sourceTree = "<group>";
-		};
-		350742E02528D0D9003B0F90 /* HistoryScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HistoryScreen;
 			sourceTree = "<group>";
 		};
 		350742F32528D173003B0F90 /* cell */ = {
@@ -375,7 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B6C42F252A8F18000872DD /* DetailsVCTests.swift in Sources */,
 				350742AF2528CF49003B0F90 /* CovidHubNetworkTests.swift in Sources */,
+				35B6C418252A89A4000872DD /* StatisticsListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.dev.CovidHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -576,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.dev.CovidHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

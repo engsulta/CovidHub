@@ -14,5 +14,4 @@ struct CovidStatisticsCellViewModel {
     var newDeath: String?
     var totalCases: String?
     var totalDeath: String?
-    
 }

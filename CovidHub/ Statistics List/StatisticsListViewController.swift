@@ -6,18 +6,18 @@
 //
 
 import UIKit
-
-
-// This VC will be used for countries and history
+/// StatisticsListViewController used for history and main countries list vc
 class StatisticsListViewController: UITableViewController {
     var viewModel: StatisticsListViewModel = StatisticsListViewModel()
     let statisticsTableCellId = "CovidStatisticsTableViewCell"
+
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.setDefaultSearchBar()
         searchController.searchBar.delegate = self
         return searchController
     }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNav()
@@ -46,6 +46,7 @@ class StatisticsListViewController: UITableViewController {
             self.handleSucess()
             completion?()
         }
+
         viewModel.reloadTableClosure = { [weak self] in
             self?.tableView.reloadData()
         }
@@ -64,7 +65,7 @@ class StatisticsListViewController: UITableViewController {
         switch viewModel.statisticsType {
         case .allCountries:
             title = "AllCountries".localized()
-        case let .history(country, day):
+        case let .history(country, _):
             title = String(format: "historyTitle".localized(), country)
         }
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -90,7 +91,6 @@ extension StatisticsListViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: statisticsTableCellId, for: indexPath) as? CovidStatisticsTableViewCell else { return UITableViewCell()}
-        cell.isShimmeringRunning = viewModel.shouldShowShimmer
         cell.viewModel = viewModel.statistics(at: indexPath.row)
         return cell
     }
@@ -122,6 +122,5 @@ extension UISearchController {
        obscuresBackgroundDuringPresentation = false
        hidesNavigationBarDuringPresentation = true
        searchBar.searchBarStyle = .minimal
-       definesPresentationContext = true
     }
 }

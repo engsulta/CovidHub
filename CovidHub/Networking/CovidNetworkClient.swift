@@ -89,7 +89,7 @@ enum CovidApiEndPoint: Equatable {
     var url: URLRequest? {
         let url = Constants.baseURL.appendingPathComponent(self.path)
         var request = URLRequest(url: url,
-                                 cachePolicy: .reloadIgnoringLocalCacheData,
+                                 cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = Constants.headers
