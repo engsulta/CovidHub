@@ -23,3 +23,4 @@
 - we can create simple shimmering effect first-time user fetch data
 
 
+![](images/video.mp4)
