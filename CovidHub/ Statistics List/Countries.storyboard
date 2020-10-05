@@ -204,6 +204,7 @@
                         <outlet property="numberOfCases" destination="74f-qY-9ha" id="NxC-Un-ph5"/>
                         <outlet property="numberOfDeaths" destination="y65-zz-ccb" id="hcB-7U-Bhu"/>
                         <outlet property="numberOfTests" destination="GK2-62-8d5" id="Rbr-JG-9co"/>
+                        <outlet property="showHistoryButton" destination="goI-8Z-JF1" id="ZYM-wY-Km6"/>
                         <outlet property="total" destination="PeI-BQ-WUk" id="EBQ-tQ-grw"/>
                         <outlet property="totalOfCases" destination="grP-Vq-Rzp" id="v1N-qd-nFv"/>
                         <outlet property="totalOfDeaths" destination="E2S-l3-srG" id="jZc-pe-VQY"/>

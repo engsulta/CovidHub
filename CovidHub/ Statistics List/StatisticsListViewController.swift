@@ -97,6 +97,7 @@ extension StatisticsListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailsVC = UIStoryboard(name: "Countries", bundle: nil).instantiateViewController(withIdentifier: "DetailsVC") as! DetailsViewController
         detailsVC.viewModel = viewModel.statistics(at: indexPath.row)
+        detailsVC.statisticsType = viewModel.statisticsType
         navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

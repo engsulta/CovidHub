@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    @IBOutlet weak var showHistoryButton: UIButton!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var numberOfCases: UILabel!
     @IBOutlet weak var numberOfDeaths: UILabel!
@@ -15,7 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var total: UILabel!
     @IBOutlet weak var totalOfCases: UILabel!
     @IBOutlet weak var totalOfDeaths: UILabel!
-
+    var statisticsType:CovidApiEndPoint = .allCountries
     var viewModel: CovidStatisticsCellViewModel?
 
     override func viewDidLoad() {
@@ -31,6 +32,10 @@ class DetailsViewController: UIViewController {
         numberOfTests.text = viewModel?.dailyTests
         totalOfCases.text = viewModel?.totalCases
         totalOfDeaths.text = viewModel?.totalDeath
+        guard statisticsType != .allCountries else { return }
+        showHistoryButton.isEnabled = false
+        showHistoryButton.alpha = 0
+
     }
 
     
