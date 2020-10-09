@@ -1,0 +1,5 @@
+language: swift  #1
+osx_image: Xcode12 #2
+xcode_project: CovidHub.xcodeproj #3
+xcode_scheme: CovidHub #4
+xcode_sdk: iphonesimulator14.0 #5
